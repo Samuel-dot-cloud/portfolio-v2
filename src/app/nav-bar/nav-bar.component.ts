@@ -41,7 +41,7 @@ export class NavBarComponent implements OnInit {
     }
   }
 
-  toggleNavDrawer(isDrawerOpen: boolean) {
+  toggleNavDrawer(isDrawerOpen: boolean | any) {
     this.isDrawerOpen = isDrawerOpen;
     this.drawerToggleEmitter.emit(this.isDrawerOpen);
   }
