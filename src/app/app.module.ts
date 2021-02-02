@@ -3,13 +3,13 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { NavBarComponent } from './nav-bar/nav-bar.component';
 import {NavBarModule} from './nav-bar/nav-bar.module';
+import { TypeDeleteComponent } from './type-delete/type-delete.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavBarComponent
+    TypeDeleteComponent
   ],
   imports: [
     BrowserModule,
