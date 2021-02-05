@@ -3,6 +3,8 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { CarouselModule } from 'ngx-owl-carousel-o';
 import {NavBarModule} from './nav-bar/nav-bar.module';
 import { TypeDeleteComponent } from './type-delete/type-delete.component';
 
@@ -14,7 +16,9 @@ import { TypeDeleteComponent } from './type-delete/type-delete.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NavBarModule
+    NavBarModule,
+    BrowserAnimationsModule,
+    CarouselModule
   ],
   providers: [],
   bootstrap: [AppComponent]

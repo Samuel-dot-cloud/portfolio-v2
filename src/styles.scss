@@ -1,7 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~bootstrap/dist/css/bootstrap.css";
 @import url('https://fonts.googleapis.com/css2?family=Inconsolata&family=Indie+Flower&family=Playfair+Display:ital@1&family=Redressed&family=Roboto:wght@300&display=swap');
-
+@import '~ngx-owl-carousel-o/lib/styles/scss/owl.carousel';
+@import '~ngx-owl-carousel-o/lib/styles/scss/owl.theme.default';
 
 /* import fonts from fonts.css file */ 
 @import url(./css/fonts.css);
@@ -225,6 +226,8 @@
 
 .site-main .about-area .client .client-img{
     padding: 2rem;
+    width: auto;
+    height: auto;
 }
 
 .site-main .about-area .client .about-client{
