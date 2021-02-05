@@ -1,4 +1,4 @@
-import { Component, OnInit, AfterViewInit, HostBinding, Input, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, HostBinding, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-nav-drawer',
@@ -12,15 +12,15 @@ export class NavDrawerComponent implements OnInit {
   isDrawerOpen?: boolean;
 
   @Output()
-  drawerTogglerEmitter: EventEmitter<boolean> = new EventEmitter<boolean>();
+  drawerToggleEmitter: EventEmitter<boolean> = new EventEmitter<boolean>();
 
   constructor() { }
 
   ngOnInit() { }
 
-  onNavLinkClicked($event: MouseEvent) {
+  onNavLinkClicked(_$event: MouseEvent) {
     this.isDrawerOpen = false;
-    this.drawerTogglerEmitter.emit(this.isDrawerOpen);
+    this.drawerToggleEmitter.emit(this.isDrawerOpen);
   }
 
 }

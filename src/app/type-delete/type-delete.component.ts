@@ -10,16 +10,16 @@ export class TypeDeleteComponent implements AfterViewInit {
   @ViewChild("blinkElement") blinkElement?: ElementRef;
 
   @Input() wordArray: string[] = [
-    "I am a mobile and web developer📱💻",
-    "I love to code.🍷",
-    "I am a life long learner📔📚"
+    "I am a mobile and web developer📱💻.",
+    "I love translating code into brilliant solutions🍷.",
+    "I like to call myself a life long learner📔📚"
   ];
 
   @Input() textColor = "black";
   @Input() fontSize = "20px";
   @Input() blinkWidth = "2px";
-  @Input() typingSpeedMilliseconds = 300;
-  @Input() deleteSpeedMilliseconds = 300;
+  @Input() typingSpeedMilliseconds = 200;
+  @Input() deleteSpeedMilliseconds = 100;
 
   private i = 0;
 
@@ -76,12 +76,16 @@ export class TypeDeleteComponent implements AfterViewInit {
 
   private deletingEffect(): void {
     const word = this.wordArray[this.i].split("");
-    const loopDeleting = () => {
+    const loopDeleting = (): any => {
       if(word.length > 0) {
         word.pop();
         this.textElement!.nativeElement.innerHTML = word.join("");
       } else {
-        this.i = this.wordArray.length > this.i + 1 ? this.i++ : 0;
+       if(this.wordArray.length > this.i +1) {
+         this.i++;
+       } else {
+         this.i = 0;
+       }
 
         this.typingEffect();
         return false;
