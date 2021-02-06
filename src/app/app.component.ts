@@ -1,6 +1,6 @@
 import { Component, HostBinding } from '@angular/core';
+import { faQuora, faMedium, faGithub, faTwitter, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { OwlOptions } from 'ngx-owl-carousel-o';
-
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -8,6 +8,13 @@ import { OwlOptions } from 'ngx-owl-carousel-o';
 })
 export class AppComponent {
   title = 'portfolio';
+
+  faQuora = faQuora;
+  faMedium = faMedium;
+  faGithub = faGithub;
+  faTwitter = faTwitter;
+  faLinkedin = faLinkedin;
+  isAnimated?: boolean;
 
   customOptions: OwlOptions = {
     loop: true,
