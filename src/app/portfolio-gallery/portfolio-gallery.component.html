@@ -1,0 +1,32 @@
+<section class="project-area">
+  <div class="container">
+    <div class="project-title pb-5">
+      <h1 class="text-uppercase title-h1">Recently Done Projects</h1>
+      <h1 class="text-uppercase title-h1">Quality Work</h1>
+    </div>
+
+    <div class="button-group">
+      <button type="button" class="active" id="btn1" (click)="filterBy='all'">All</button>
+      <button type="button" (click)="filterBy='popular'">Popular</button>
+      <button type="button" (click)="filterBy='latest'">Latest</button>
+      <button type="button" (click)="filterBy='following'">Following</button>
+      <button type="button" (click)="filterBy='upcoming'">Upcoming</button>
+    </div>
+
+    <div class="row grid">
+      <div class="col-lg-4 col-md-6 col-sm-12 element-item popular">
+        <div class="our-project">
+          <div class="img" *ngFor="let img of (allImages | filterImages:filterBy)">
+            <a class="test-popup-link" href="{{img.url}}">
+              <img src="{{img.url}}" alt="portfolio-1" class="img-fluid">
+            </a>
+            <div class="title py-4">
+              <h4 class="text-uppercase">{{img.name}}</h4>
+              <span class="text-secondary">{{img.description}}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

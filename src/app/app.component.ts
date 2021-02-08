@@ -21,8 +21,8 @@ export class AppComponent {
     mouseDrag: false,
     touchDrag: false,
     pullDrag: false,
-    dots: false,
-    navSpeed: 700,
+    dots: true,
+    autoplay: true,
     navText: ['', ''],
     responsive: {
       0: {
@@ -38,7 +38,6 @@ export class AppComponent {
         items: 4
       }
     },
-    nav: true
   }
 
   @HostBinding("class.drawer-open")

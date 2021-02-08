@@ -8,6 +8,7 @@ import { CarouselModule } from 'ngx-owl-carousel-o';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import {NavBarModule} from './nav-bar/nav-bar.module';
 import { TypeDeleteComponent } from './type-delete/type-delete.component';
+import { PortfolioGalleryModule } from './portfolio-gallery/portfolio-gallery.module';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { TypeDeleteComponent } from './type-delete/type-delete.component';
     NavBarModule,
     BrowserAnimationsModule,
     CarouselModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    PortfolioGalleryModule
   ],
   providers: [],
   bootstrap: [AppComponent]
