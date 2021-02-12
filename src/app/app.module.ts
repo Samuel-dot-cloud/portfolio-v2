@@ -9,6 +9,10 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import {NavBarModule} from './nav-bar/nav-bar.module';
 import { TypeDeleteComponent } from './type-delete/type-delete.component';
 import { PortfolioGalleryModule } from './portfolio-gallery/portfolio-gallery.module';
+import { AngularFireModule } from '@angular/fire';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { environment } from 'src/environments/environment';
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -22,7 +26,10 @@ import { PortfolioGalleryModule } from './portfolio-gallery/portfolio-gallery.mo
     BrowserAnimationsModule,
     CarouselModule,
     FontAwesomeModule,
-    PortfolioGalleryModule
+    PortfolioGalleryModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFirestoreModule,
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]
