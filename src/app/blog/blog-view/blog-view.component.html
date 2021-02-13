@@ -1,1 +1,32 @@
-<p>blog-view works!</p>
+<section class="about-area">
+    <div class="container">
+      <div class="row text-center">
+        <div class="col-12">
+          <div class="about-title">
+            <h1 class="text-uppercase title-h1">Blog</h1>
+            <p class="para">
+              Get to see my views and musings on various topics.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container carousel py-lg-5">
+        <owl-carousel-o [options]="customOptions">
+          <ng-template carouselSlide *ngFor="let blog of blogs | async">
+            <div class="client row">
+              <div class="col-lg-4 col-md-12 client-img">
+                <img src="{{blog.image}}" alt="{{blog.title}}" class="img-fluid">
+              </div>
+              <div class="col-lg-8 col-md-12 about-client">
+                <h4 class="text-uppercase">Written by {{blog.author}}</h4>
+                <p class="para">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quidem architecto
+                  consequuntur ratione, obcaecati corrupti deserunt.</p>
+              </div>
+            </div>
+          </ng-template>
+        </owl-carousel-o>
+    </div>
+
+  </section>

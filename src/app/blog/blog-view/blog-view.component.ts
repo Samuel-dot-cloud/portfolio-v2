@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { OwlOptions } from 'ngx-owl-carousel-o';
+import { Observable } from 'rxjs';
+import { Blog } from '../blog';
+import { BlogService } from '../blog.service';
 
 @Component({
   selector: 'app-blog-view',
@@ -6,10 +10,36 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./blog-view.component.scss']
 })
 export class BlogViewComponent implements OnInit {
+  blogs?: Observable<Blog[]> | any
 
-  constructor() { }
+  constructor(private blogService: BlogService) { }
 
-  ngOnInit(): void {
+  customOptions: OwlOptions = {
+    loop: true,
+    mouseDrag: false,
+    touchDrag: false,
+    pullDrag: false,
+    dots: true,
+    autoplay: true,
+    navText: ['', ''],
+    responsive: {
+      0: {
+        items: 1
+      },
+      400: {
+        items: 2
+      },
+      740: {
+        items: 2
+      },
+      940: {
+        items: 2
+      }
+    },
+  }
+
+  ngOnInit() {
+    this.blogs = this.blogService.getPosts();
   }
 
 }
