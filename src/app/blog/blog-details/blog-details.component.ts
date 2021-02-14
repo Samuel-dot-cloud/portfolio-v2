@@ -9,7 +9,7 @@ import { BlogService } from '../blog.service';
   styleUrls: ['./blog-details.component.scss']
 })
 export class BlogDetailsComponent implements OnInit {
-  blog?: Blog;
+  blog?: Blog | any;
   constructor(private route: ActivatedRoute, private blogService: BlogService, private router: Router) { }
 
   ngOnInit() {

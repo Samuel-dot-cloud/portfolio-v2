@@ -30,10 +30,10 @@ export class BlogViewComponent implements OnInit {
         items: 2
       },
       740: {
-        items: 2
+        items: 3
       },
       940: {
-        items: 2
+        items: 3
       }
     },
   }
