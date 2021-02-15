@@ -6,7 +6,6 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import {NavBarModule} from './nav-bar/nav-bar.module';
-import { TypeDeleteComponent } from './type-delete/type-delete.component';
 import { PortfolioGalleryModule } from './portfolio-gallery/portfolio-gallery.module';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
@@ -17,7 +16,6 @@ import { BlogModule } from './blog/blog.module';
 @NgModule({
   declarations: [
     AppComponent,
-    TypeDeleteComponent
   ],
   imports: [
     BrowserModule,
@@ -30,6 +28,8 @@ import { BlogModule } from './blog/blog.module';
     AngularFirestoreModule,
     SharedModule,
     BlogModule
+  ],
+  exports: [
   ],
   providers: [],
   bootstrap: [AppComponent]

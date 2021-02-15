@@ -5,21 +5,29 @@ import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { SkillsComponent } from './skills/skills.component';
 import { ServicesComponent } from './services/services.component';
-import { ProjectsComponent } from './projects/projects.component';
 import { NewsletterComponent } from './newsletter/newsletter.component';
 import { FooterComponent } from './footer/footer.component';
+import { TypeDeleteComponent } from '../type-delete/type-delete.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 
 
 @NgModule({
-  declarations: [HomeComponent, AboutComponent, SkillsComponent, ServicesComponent, ProjectsComponent, NewsletterComponent, FooterComponent],
+  declarations: [HomeComponent, AboutComponent, SkillsComponent, ServicesComponent,  NewsletterComponent, FooterComponent, TypeDeleteComponent],
   imports: [
     CommonModule,
-    MaterialModule
+    MaterialModule,
+    FontAwesomeModule
   ],
   exports: [
     CommonModule,
-    MaterialModule
+    MaterialModule,
+    HomeComponent,
+    AboutComponent,
+    SkillsComponent,
+    ServicesComponent,
+    NewsletterComponent,
+    FooterComponent
   ]
 })
 export class SharedModule { }
