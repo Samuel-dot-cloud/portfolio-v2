@@ -15,15 +15,6 @@ export class NavBarComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() { 
-    this.navElement = null!;
-    this.isDrawerOpen = false;
-  }
-
-  ngAfterViewInit() {
-    this.navElement = <HTMLElement> document.getElementById("navbar");
-  }
-
   @HostListener("window:scroll", ["$event"])
   onScroll($event: Event) {
     let scrollFactor = 200;
@@ -40,6 +31,17 @@ export class NavBarComponent implements OnInit {
       this.navElement?.classList.remove("navbar-shadow");
     }
   }
+
+  ngOnInit() { 
+    this.navElement = null!;
+    this.isDrawerOpen = false;
+  }
+
+  ngAfterViewInit() {
+    this.navElement = <HTMLElement> document.getElementById("navbar");
+  }
+
+
 
   toggleNavDrawer(isDrawerOpen: boolean | any) {
     this.isDrawerOpen = isDrawerOpen;

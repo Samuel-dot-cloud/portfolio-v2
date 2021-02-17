@@ -17,11 +17,12 @@
           <ng-template carouselSlide *ngFor="let blog of blogs | async">
             <div class="client row">
               <div class="col-lg-4 col-md-12 client-img">
-                <img src="{{blog.image}}" alt="{{blog.title}}">
+                <img src="{{blog.image}}" alt="{{blog.title}}" >
               </div>
               <div class="col-lg-8 col-md-12 about-client">
                 <h4 class="text-uppercase">{{blog.title}}</h4>
                 <p class="para">Written by {{blog.author}}</p>
+                <a class="navbar-brand override" routerLink="{{blog.id}}"> READ MORE</a>
               </div>
             </div>
           </ng-template>
@@ -41,3 +42,4 @@
   </owl-carousel-o> -->
 
 </section>
+

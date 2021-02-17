@@ -15,7 +15,7 @@ import { BlogModule } from './blog/blog.module';
 
 @NgModule({
   declarations: [
-    AppComponent,
+    AppComponent
   ],
   imports: [
     BrowserModule,

@@ -13,7 +13,15 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 
 @NgModule({
-  declarations: [HomeComponent, AboutComponent, SkillsComponent, ServicesComponent,  NewsletterComponent, FooterComponent, TypeDeleteComponent],
+  declarations: [
+    HomeComponent,
+    AboutComponent,
+    SkillsComponent,
+    ServicesComponent,
+    NewsletterComponent,
+    FooterComponent,
+    TypeDeleteComponent
+  ],
   imports: [
     CommonModule,
     MaterialModule,
