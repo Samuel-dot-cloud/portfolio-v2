@@ -12,15 +12,21 @@ import { ServicesComponent } from './shared/services/services.component';
 import { SkillsComponent } from './shared/skills/skills.component';
 
 const routes: Routes = [
-  { path: '', component: AppComponent },
-  { path: 'home', component: HomeComponent },
-  { path: 'about', component: AboutComponent },
-  { path: 'skills', component: SkillsComponent },
-  { path: 'services', component: ServicesComponent },
-  { path: 'projects', component: PortfolioGalleryComponent },
-  { path: 'blog', component: BlogViewComponent },
-  { path: 'newsletter', component: NewsletterComponent },
-  { path: 'contact', component: FooterComponent }
+  // { path: '', component: AppComponent },
+  // { path: 'home', component: HomeComponent },
+  // { path: 'about', component: AboutComponent },
+  // { path: 'skills', component: SkillsComponent },
+  // { path: 'services', component: ServicesComponent },
+  // { path: 'projects', component: PortfolioGalleryComponent },
+  {
+    path: 'blog',
+    component: BlogViewComponent,
+    children: [
+      { path: ':id', component: BlogDetailsComponent }
+    ]
+  }
+  // { path: 'newsletter', component: NewsletterComponent },
+  // { path: 'contact', component: FooterComponent }
 ];
 
 @NgModule({
