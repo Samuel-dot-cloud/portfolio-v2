@@ -12,10 +12,13 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { environment } from 'src/environments/environment';
 import { SharedModule } from './shared/shared.module';
 import { BlogModule } from './blog/blog.module';
+import { ModalComponent } from './modal/modal.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ModalComponent
   ],
   imports: [
     BrowserModule,
@@ -27,11 +30,13 @@ import { BlogModule } from './blog/blog.module';
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,
     SharedModule,
-    BlogModule
+    BlogModule,
+    FormsModule
   ],
   exports: [
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [ModalComponent]
 })
 export class AppModule { }

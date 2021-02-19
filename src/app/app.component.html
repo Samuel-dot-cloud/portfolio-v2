@@ -23,6 +23,13 @@
     <app-home></app-home>
     <!--  ======================= End Home Area =======================  -->
 
+    <div>
+      <button mat-raised-button (click)="openDialog()">Contact</button>
+      <br>
+      <div *ngIf="email">
+        You contacted with: <p> {{email}}</p>
+      </div>
+    </div>
     <!--  ========================= About Area ==========================  -->
 
     <app-about></app-about>
