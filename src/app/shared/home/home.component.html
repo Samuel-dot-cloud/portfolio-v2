@@ -10,7 +10,7 @@
           <div class="site-buttons">
             <div class="d-flex flex-row flex-wrap">
               <a type="button" class="btn button primary-button mr-4 text-uppercase" [href]="fileUrl" [download]="myFileName">My Resume</a>
-              <button type="button" class="btn button secondary-button text-uppercase">Contact Me</button>
+              <button type="button" class="btn button secondary-button text-uppercase" (click)="openDialog()">Contact Me</button>
             </div>
           </div>
         </div>

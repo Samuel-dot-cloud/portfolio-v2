@@ -1,6 +1,4 @@
 import { Component, HostBinding } from '@angular/core';
-import { MatDialog } from '@angular/material/dialog';
-import { ModalComponent } from './modal/modal.component';
 
 
 
@@ -11,9 +9,6 @@ import { ModalComponent } from './modal/modal.component';
 })
 export class AppComponent {
   title = 'portfolio';
-  email?: string;
-
-  constructor(public dialog: MatDialog) {}
   
   isAnimated?: boolean;
 
@@ -24,16 +19,7 @@ export class AppComponent {
     this.isDrawerOpen = isDrawerOpen;
   }
 
-  openDialog(): void {
-    const dialogRef = this.dialog.open(ModalComponent, {
-      width: '300px',
-      data: {}
-    });
-
-    dialogRef.afterClosed().subscribe(result => {
-      this.email = result;
-    });
-  }
+  
 
   
 

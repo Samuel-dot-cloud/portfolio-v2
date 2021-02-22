@@ -1,21 +1,33 @@
 <h1 mat-dialog-title>Contact Form</h1>
 <div mat-dialog-content>
-  <mat-form-field appearance="fill">
+  <mat-form-field appearance="fill" color="accent">
     <mat-label>Name</mat-label>
-    <input matInput>
+    <input matInput [(ngModel)]="data.name">
   </mat-form-field>
-  <mat-form-field appearance="fill">
+  <mat-form-field appearance="fill" color="accent">
     <mat-label>Email</mat-label>
     <input matInput [(ngModel)]="data.email">
   </mat-form-field>
-  <mat-form-field appearance="fill">
+  <mat-form-field appearance="fill" color="accent">
+    <mat-label>Phone</mat-label>
+    <input matInput [(ngModel)]="data.phone">
+  </mat-form-field>
+  <mat-form-field appearance="fill" color="accent">
+    <mat-label>Select a service</mat-label>
+    <mat-select [(value)]="selected">
+      <mat-option>None</mat-option>
+      <mat-option value="option1">Web Design</mat-option>
+      <mat-option value="option2">Mobile App Development</mat-option>
+    </mat-select>
+  </mat-form-field>
+  <mat-form-field appearance="fill" color="accent">
     <mat-label>Tell me something...</mat-label>
-    <textarea matInput></textarea>
+    <textarea matInput [(ngModel)]="data.paragraph"></textarea>
   </mat-form-field>
 </div>
 
 <div mat-dialog-actions>
   <button mat-button (click)="onNoClick()">Cancel</button>
-  <button mat-button [mat-dialog-close]="data.email" cdkFocusInitial>Yes</button>
+  <button mat-button (click)="processForm()" cdkFocusInitial [disabled]="!data.name || !data.email || !data.phone || !data.paragraph">Submit</button>
 
 </div>
