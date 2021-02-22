@@ -27,9 +27,12 @@ export class ModalComponent implements OnInit {
     this.dialogRef.close();
   }
 
-  processForm() {
+  mailText:string = "";
+
+  mailMe(){
     const allInfo = `My name is ${this.data.name}. My email is ${this.data.email}. My phone is ${this.data.phone}. My selected service is ${this.selected}. My message is ${this.data.paragraph}`;
-    alert(allInfo); 
+    this.mailText = `mailto:samuelwahome.k5@gmail.com ?subject=Contact Sam The Developer&body=${allInfo}`
+    window.location.href = this.mailText;
     this.onNoClick();
   }
 
