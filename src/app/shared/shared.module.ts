@@ -9,6 +9,7 @@ import { NewsletterComponent } from './newsletter/newsletter.component';
 import { FooterComponent } from './footer/footer.component';
 import { TypeDeleteComponent } from '../type-delete/type-delete.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { ProjectsComponent } from './projects/projects.component';
 
 
 
@@ -20,7 +21,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     ServicesComponent,
     NewsletterComponent,
     FooterComponent,
-    TypeDeleteComponent
+    TypeDeleteComponent,
+    ProjectsComponent
   ],
   imports: [
     CommonModule,
@@ -35,7 +37,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     SkillsComponent,
     ServicesComponent,
     NewsletterComponent,
-    FooterComponent
+    FooterComponent,
+    ProjectsComponent
   ]
 })
 export class SharedModule { }
