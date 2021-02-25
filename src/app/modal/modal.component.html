@@ -28,6 +28,6 @@
 
 <div mat-dialog-actions>
   <button mat-button (click)="onNoClick()">Cancel</button>
-  <button mat-button (click)="mailMe()" cdkFocusInitial [disabled]="!data.name || !data.email || !data.phone || !selected ||!data.paragraph ">Submit</button>
+  <button mat-button (click)="mailMe()" [disabled]="!data.name || !data.email || !data.phone || !selected ||!data.paragraph ">Submit</button>
 
 </div>

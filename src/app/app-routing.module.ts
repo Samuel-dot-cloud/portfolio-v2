@@ -12,10 +12,9 @@ import { ServicesComponent } from './shared/services/services.component';
 import { SkillsComponent } from './shared/skills/skills.component';
 
 const routes: Routes = [
-  {path: '', loadChildren: './blog/blog.module#BlogModule'},
-  { path: 'blog',component: BlogViewComponent },
-  {path: 'blog/:id', component: BlogDetailsComponent},
-  
+  { path: '', loadChildren: './blog/blog.module#BlogModule' },
+  { path: 'blog/:id', component: BlogDetailsComponent },
+  { path: 'blog', component: BlogViewComponent }
 ];
 
 @NgModule({
