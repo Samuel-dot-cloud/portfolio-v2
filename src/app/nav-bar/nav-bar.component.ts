@@ -1,4 +1,4 @@
-import { Component, HostListener, OnInit, Output, EventEmitter} from '@angular/core';
+import { Component, HostListener, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-nav-bar',
@@ -14,6 +14,17 @@ export class NavBarComponent implements OnInit {
   drawerToggleEmitter: EventEmitter<boolean> = new EventEmitter<boolean>();
 
   constructor() { }
+
+
+
+  ngOnInit() {
+    this.navElement = null!;
+    this.isDrawerOpen = false;
+  }
+
+  ngAfterViewInit() {
+    this.navElement = <HTMLElement>document.getElementById("navbar");
+  }
 
   @HostListener("window:scroll", ["$event"])
   onScroll($event: Event) {
@@ -31,17 +42,6 @@ export class NavBarComponent implements OnInit {
       this.navElement?.classList.remove("navbar-shadow");
     }
   }
-
-  ngOnInit() { 
-    this.navElement = null!;
-    this.isDrawerOpen = false;
-  }
-
-  ngAfterViewInit() {
-    this.navElement = <HTMLElement> document.getElementById("navbar");
-  }
-
-
 
   toggleNavDrawer(isDrawerOpen: boolean | any) {
     this.isDrawerOpen = isDrawerOpen;

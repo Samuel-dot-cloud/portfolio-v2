@@ -1,12 +1,35 @@
-mat-card {
-    margin: 10px 0;
-}
-
-img {
-    width: 100%;
-    height: auto;
+.blog_img {
+  width: 100%;
+  padding: 20px;
+  height: 200px;
 }
 
 .blog_details {
-    font-family: 'Playfair Display', serif;
+  font-family: 'Playfair Display', serif;
+  float: left;
+  padding-left: 20px;
 }
+
+.card {
+  background-color: white;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.leftcolumn {
+  float: left;
+  width: 75%;
+}
+
+.rightcolumn {
+  float: left;
+  padding-left: 20px;
+}
+
+
