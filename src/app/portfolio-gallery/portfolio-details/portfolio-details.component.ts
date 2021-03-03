@@ -1,7 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { ProjectImagesService} from '../../project-images.service';
+import { Component, Inject, OnInit } from '@angular/core';
+import { ProjectImagesService } from '../../project-images.service';
 import { ActivatedRoute } from '@angular/router';
-
 
 @Component({
   selector: 'app-portfolio-details',
@@ -9,12 +8,14 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./portfolio-details.component.scss']
 })
 export class PortfolioDetailsComponent implements OnInit {
-image: any;
+  image: any;
 
   constructor(private imageService: ProjectImagesService, private route: ActivatedRoute) { }
 
+
+
   ngOnInit() {
-    this.image = this.imageService.getImage(this.route.snapshot.params['id'])
+    this.image = this.imageService.getImage(this.route.snapshot.params['id']);
   }
 
 }

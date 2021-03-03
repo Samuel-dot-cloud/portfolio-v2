@@ -5,6 +5,7 @@ import { PortfolioDetailsComponent } from './portfolio-details/portfolio-details
 import { FilterImagesPipe } from './filter-images.pipe';
 import { ProjectImagesService } from '../project-images.service';
 import { AppRoutingModule } from '../app-routing.module'; 
+import { MaterialModule } from '../material.module';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { AppRoutingModule } from '../app-routing.module';
   ],
   imports: [
     CommonModule,
-    AppRoutingModule
+    AppRoutingModule,
+    MaterialModule
     
   ],
   exports: [
