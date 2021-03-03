@@ -1,7 +1,14 @@
 .blog_img {
-  width: 100%;
-  padding: 20px;
-  height: 200px;
+  width: 60%;
+  margin: auto;
+  display: block;
+  max-height: 300px;
+}
+
+.blog-title{
+  font-family: 'Indie Flower', cursive;
+  font-size: 50px;
+  text-align: center;
 }
 
 .blog_details {
@@ -13,7 +20,9 @@
 .card {
   background-color: white;
   padding: 20px;
-  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  // margin-top: 20px;
 }
 
 .row:after {
@@ -24,7 +33,7 @@
 
 .leftcolumn {
   float: left;
-  width: 75%;
+  width: 100%;
 }
 
 .rightcolumn {

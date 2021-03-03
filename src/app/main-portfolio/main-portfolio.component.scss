@@ -1,0 +1,52 @@
+/* css variables */
+@import url(../../css/partials/variables.css);
+
+:host {
+  position: relative;
+  display: block;
+  left: 0;
+  transition: left 0.3s ease;
+}
+
+:host.drawer-open {
+  left: 70%;
+}
+
+.nav-bar {
+  position: fixed;
+  display: block;
+  top: 0;
+  width: 100vw;
+  z-index: 100;
+}
+
+.navbar-padding {
+  display: block;
+  position: relative;
+  margin-top: 3.5rem;
+}
+
+// services section
+.site-main .services-area {
+  padding: 7rem 2rem;
+}
+
+.site-main .services-area .services-title {
+  padding: 0 14rem;
+}
+
+.site-main .services-area .services-title h1 {
+  font-size: 35px;
+}
+
+.site-main>.services-area .services {
+  background: rgba(248, 252, 253, 0.973);
+  padding: 2rem 0;
+  width: 16rem;
+  margin: 5rem .5rem;
+  transition: box-shadow .7s ease;
+}
+
+.site-main>.services-area .services:hover {
+  box-shadow: var(--box-shadow);
+}

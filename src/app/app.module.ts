@@ -14,11 +14,15 @@ import { SharedModule } from './shared/shared.module';
 import { BlogModule } from './blog/blog.module';
 import { ModalComponent } from './modal/modal.component';
 import { FormsModule } from '@angular/forms';
+import { MainPortfolioComponent } from './main-portfolio/main-portfolio.component';
+import { TypeDeleteComponent } from './type-delete/type-delete.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ModalComponent
+    ModalComponent,
+    MainPortfolioComponent,
+    TypeDeleteComponent
   ],
   imports: [
     BrowserModule,

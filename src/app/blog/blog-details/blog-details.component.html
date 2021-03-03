@@ -1,21 +1,28 @@
-<!-- <mat-card *ngIf="blog" color="accent">
-  <img src="{{blog.image}}" alt="{{blog.title}}">
-  <p>Posted by {{blog.author}} &bull; {{blog.published}}</p>
+<!-- <mat-card *ngIf="blog" class="blog-card">
+  <img mat-card-image src="{{blog.image}}" alt="{{blog.title}}">
+  <mat-card-title>{{blog.title}}</mat-card-title>
+  <mat-card-subtitle>Posted by {{blog.author}} &bull; {{blog.published}}</mat-card-subtitle>
   <mat-card-content>
-    <h1>{{blog.title}}</h1>
     <p class="blog_details" [innerHTML]="blog.content"></p>
   </mat-card-content>
 </mat-card> -->
 
-<body>
-  <div class="row" *ngIf="blog">
-    <div class="leftcolumn">
-      <div class="card">
-        <h2>{{blog.title}}</h2>
-        <h5>{{blog.published}}</h5>
-        <img src="{{blog.image}}" class="blog_img">
-        <p class="blog_details" [innerHTML]="blog.content"></p>
-      </div>
+
+<div class="row" *ngIf="blog">
+  <div class="leftcolumn">
+    <div class="card">
+      <h2 class="blog-title">{{blog.title}}</h2>
+      <br>
+      <h5>Posted by {{blog.author}}.</h5>
+      <h6>Date published: {{blog.published.seconds * 1000 | date: 'MM/dd/yyyy'}}</h6>
+      <img src="{{blog.image}}" class="blog_img">
+      <br>
+      <p class="blog_details" [innerHTML]="blog.content"></p>
+      <mat-card-actions align="end">
+        <button mat-fab color="accent" routerLink="/">
+          <mat-icon>home</mat-icon>
+        </button>
+      </mat-card-actions>
     </div>
   </div>
-</body>
+</div>

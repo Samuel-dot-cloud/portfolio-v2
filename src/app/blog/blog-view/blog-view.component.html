@@ -15,14 +15,14 @@
   <div class="container carousel py-lg-5">
         <owl-carousel-o [options]="customOptions">
           <ng-template carouselSlide *ngFor="let blog of blogs | async">
-            <div class="client row">
+            <div class="client row" routerLink="/blog/{{blog.id}}">
               <div class="col-lg-4 col-md-12 client-img">
                 <img src="{{blog.image}}" alt="{{blog.title}}" >
               </div>
               <div class="col-lg-8 col-md-12 about-client">
                 <h4 class="text-uppercase">{{blog.title}}</h4>
                 <p class="para">Written by {{blog.author}}</p>
-                <a class="navbar-brand override" routerLink="{{blog.id}}"> READ MORE</a>
+                <p class="para">Date published: {{blog.published.seconds * 1000 | date: 'MM/dd/yyyy'}}</p>
               </div>
             </div>
           </ng-template>

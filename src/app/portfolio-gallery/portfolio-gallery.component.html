@@ -13,17 +13,31 @@
       <button type="button" (click)="filterBy='upcoming'">Upcoming</button>
     </div>
 
-    <div class="row grid">
+    <!-- <div class="row grid">
       <div class="col-lg-4 col-md-6 col-sm-12 element-item popular">
         <div class="our-project">
           <div class="img" *ngFor="let img of (allImages | filterImages:filterBy)">
             <a class="test-popup-link" href="{{img.url}}">
-              <img src="{{img.url}}" alt="portfolio-1" class="img-fluid">
+              <img src="{{img.url}}" alt="portfolio-1" class="img-fluid" style="width:100%">
             </a>
             <div class="title py-4">
               <h4 class="text-uppercase">{{img.name}}</h4>
               <span class="text-secondary">{{img.description}}</span>
             </div>
+          </div>
+        </div>
+      </div>
+    </div> -->
+
+    <div class="our-project">
+      <div class="row">
+        <div class="column" *ngFor="let img of (allImages | filterImages:filterBy)">
+          <a class="test-popup-link" href="{{img.url}}">
+            <img src="{{img.url}}" alt="portfolio-1" class="img-fluid">
+          </a>
+          <div class="title py-4">
+            <h4 class="text-uppercase">{{img.name}}</h4>
+            <span class="text-secondary">{{img.description}}</span>
           </div>
         </div>
       </div>

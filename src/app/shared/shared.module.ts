@@ -21,7 +21,6 @@ import { ProjectsComponent } from './projects/projects.component';
     ServicesComponent,
     NewsletterComponent,
     FooterComponent,
-    TypeDeleteComponent,
     ProjectsComponent
   ],
   imports: [
