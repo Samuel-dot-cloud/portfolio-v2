@@ -4,29 +4,25 @@
     <p>{{image.description}}</p>
 </div> -->
 
-<mat-card class="example-card">
-    <mat-card-header>
-      <div mat-card-avatar class="example-header-image"></div>
-      <mat-card-title>{{image.name}}</mat-card-title>
-      <mat-card-subtitle>Portfolio details</mat-card-subtitle>
-    </mat-card-header>
-    <img mat-card-image src="{{image.url}}" alt="{{image.url}}">
-    <mat-card-content>
-      <p>{{image.description}}</p>
-    </mat-card-content>
-    <mat-card-actions>
-      <button mat-button>LIKE</button>
-      <button mat-button>SHARE</button>
-    </mat-card-actions>
-  </mat-card>
-
-  <!-- <h2 mat-dialog-title *ngIf="image">Install Angular</h2>
-<mat-dialog-content class="mat-typography">
-  <img src="{{image.url}}">
-  <h3>{{image.name}}</h3>
-  <p>{{image.description}}</p>
-</mat-dialog-content>
-<mat-dialog-actions align="end">
-  <button mat-button mat-dialog-close>Cancel</button>
-  <button mat-button [mat-dialog-close]="true" cdkFocusInitial>Install</button>
-</mat-dialog-actions> -->
+<body>
+  <div class="main-div">
+    <mat-card class="example-card">
+      <mat-card-header>
+        <div mat-card-avatar class="example-header-image"></div>
+        <mat-card-title>{{image.name}}</mat-card-title>
+        <mat-card-subtitle>Portfolio details</mat-card-subtitle>
+      </mat-card-header>
+      <img mat-card-image src="{{image.url}}" alt="{{image.url}}">
+      <mat-card-content>
+        <p>{{image.description}}</p>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-button>Github</button>
+        <button mat-button>Live Demo</button>
+        <button mat-fab color="primary" routerLink="/">
+          <mat-icon>home</mat-icon>
+        </button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+</body>
