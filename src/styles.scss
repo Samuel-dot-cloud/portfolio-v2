@@ -403,5 +403,38 @@ footer.footer-area .social a:hover>i {
 
 
 /* End Footer */
-// html, body { height: 100%; }
-// body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+// Bubble text directive css
+body {
+  background-color: #2b2c34;
+}
+
+.animated-text {
+  font-family: monospace, sans-serif;
+  text-shadow: 0 0 1px #ffffff;
+  position: fixed;
+  bottom: -100vh;
+  user-select: none;
+  animation-timing-function: ease-in-out;
+  z-index: -1;
+}
+
+@keyframes float-animation {
+  0% {
+    top: 100vh;
+    opacity: 0;
+  }
+  25% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 0.75;
+  }
+  100% {
+    top: 0;
+    opacity: 0;
+  }
+}

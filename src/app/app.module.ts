@@ -16,13 +16,15 @@ import { ModalComponent } from './modal/modal.component';
 import { FormsModule } from '@angular/forms';
 import { MainPortfolioComponent } from './main-portfolio/main-portfolio.component';
 import { TypeDeleteComponent } from './type-delete/type-delete.component';
+import { BubblingTextDirective} from './bubbling-text.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     ModalComponent,
     MainPortfolioComponent,
-    TypeDeleteComponent
+    TypeDeleteComponent,
+    BubblingTextDirective
   ],
   imports: [
     BrowserModule,
