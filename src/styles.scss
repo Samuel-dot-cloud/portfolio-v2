@@ -15,6 +15,38 @@
 @import url(./css/partials/global.css);
 
 
+/* start navigation */
+
+.header_area .main-menu .navbar .navbar-brand {
+  padding: 0 2rem 0 5rem;
+}
+
+.header_area .main-menu .navbar {
+  padding: 1rem 20rem;
+}
+
+.header_area .main-menu .nav-item .nav-link {
+  font: normal 500 15px/2px var(--roboto);
+  text-transform: uppercase;
+  padding: 1.7rem;
+  color: var(--title-color);
+}
+
+.header_area .main-menu .navbar-nav .active a {
+  background: var(--gradient-color);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.header_area .main-menu .navbar-nav a:hover {
+  background: var(--gradient-color);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* end navigation */
 
 /* Banner Area */
 
@@ -155,19 +187,19 @@
 
 /* Services Area */
 
-.site-main .services-area{
+.site-main .services-area {
   padding: 7rem 2rem;
 }
 
-.site-main .services-area .services-title{
+.site-main .services-area .services-title {
   padding: 0 14rem;
 }
 
-.site-main .services-area .services-title h1{
+.site-main .services-area .services-title h1 {
   font-size: 35px;
 }
 
-.site-main > .services-area .services{
+.site-main>.services-area .services {
   background: rgba(248, 252, 253, 0.973);
   padding: 2rem 0;
   width: 16rem;
@@ -175,7 +207,7 @@
   transition: box-shadow .7s ease;
 }
 
-.site-main > .services-area .services:hover{
+.site-main>.services-area .services:hover {
   box-shadow: var(--box-shadow);
 }
 
@@ -320,6 +352,8 @@ footer.footer-area .social a:hover>i {
 
 /* if the viewport is equal to 340px or less than that */
 @media only screen and (max-width: 340px) {
+  .header_area .main-menu .navbar,
+  .header_area .main-menu .navbar .navbar-brand,
   .site-main .subscribe-us-area .subscribe .subscribe-title,
   .site-main .subscribe-us-area .subscribe .subscribe-title p,
   h4,
@@ -405,9 +439,7 @@ footer.footer-area .social a:hover>i {
 /* End Footer */
 
 // Bubble text directive css
-body {
-  background-color: #2b2c34;
-}
+
 
 .animated-text {
   font-family: monospace, sans-serif;
@@ -424,15 +456,19 @@ body {
     top: 100vh;
     opacity: 0;
   }
+
   25% {
     opacity: 1;
   }
+
   50% {
     opacity: 1;
   }
+
   75% {
     opacity: 0.75;
   }
+
   100% {
     top: 0;
     opacity: 0;

@@ -2,15 +2,95 @@
 
   <!--  ======================= Start Header Area ============================== -->
 
-  <app-nav-bar class="nav-bar" (drawerToggleEmitter)="toggleDrawer($event)"></app-nav-bar>
-  <!-- <mat-toolbar color="accent">
-    <span>My Application</span>
-  </mat-toolbar> -->
+  <header class="header_area " id="navbar" >
+    <div class="main-menu">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <a class="navbar-brand" href="#"><img src="../../assets/img/logo.png" alt="logo"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" 
+            aria-controls="navbarSupportedContent" 
+            aria-expanded="false" aria-label="Toggle navigation"
+            (click)="toggleCollapsed()">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent" [ngClass]="{'collapse': collapsed, 'navbar-collapse': true}" >
+                <div class="mr-auto"></div>
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show" (click)="onClick()">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show" (click)="onClick()">about</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show" (click)="onClick()">services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show" (click)="onClick()">portfolio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show" (click)="onClick()">pages</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show" (click)="onClick()">blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show" (click)="onClick()">contact</a>
+                    </li>
 
+                </ul>
+            </div>
+        </nav>
+    </div>
+</header>
+
+<!-- <nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+      <div class="navbar-header">
+              <button type="button" 
+                      class="navbar-toggle collapsed"
+                      (click)="toggleState()">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand">Project Manager</a>
+      </div>
+       <div class="collapse navbar-collapse"
+            [ngClass]="{ 'in': isIn }">
+          <ul class="nav navbar-nav">
+              <li><a>Link 1</a></li>
+              <li><a>Link 2</a></li>
+          </ul>
+      </div>
+  </div>
+</nav> -->
+
+  <!-- <app-nav-bar class="nav-bar" (drawerToggleEmitter)="toggleDrawer($event)"></app-nav-bar> -->
+  <!-- <mat-toolbar color="accent">
+    <mat-toolbar-row>
+      <span>My App</span>
+      <span class="example-spacer"></span>
+      <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+        <mat-icon>menu</mat-icon>
+      </button>
+    </mat-toolbar-row>
+
+    <mat-toolbar-row>
+      <span>Second Line</span>
+      <span class="example-spacer"></span>
+      <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+        <mat-icon>favorite</mat-icon>
+      </button>
+      <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+        <mat-icon>share</mat-icon>
+      </button>
+    </mat-toolbar-row>
+  </mat-toolbar> -->
   <!--  ======================= End Header Area ============================== -->
 
   <!--  ======================= Start Main Area ================================ -->
-  <main class="site-main">
+  <main class="site-main" >
 
 
     <!--  ======================= Start Home Area =======================  -->
