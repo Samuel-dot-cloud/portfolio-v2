@@ -13,8 +13,8 @@
     <div class="card">
       <h2 class="blog-title">{{blog.title}}</h2>
       <br>
-      <h5>Posted by {{blog.author}}.</h5>
-      <h6>Date published: {{blog.published.seconds * 1000 | date: 'MM/dd/yyyy'}}</h6>
+      <h5 class="blog-extras">Posted by {{blog.author}}.</h5>
+      <h6 class="blog-extras">Date published: {{blog.published.seconds * 1000 | date: 'MM/dd/yyyy'}}</h6>
       <img src="{{blog.image}}" class="blog_img">
       <br>
       <p class="blog_details" [innerHTML]="blog.content"></p>

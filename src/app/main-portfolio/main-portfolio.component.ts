@@ -1,6 +1,4 @@
-import { animate, state, style, transition, trigger } from '@angular/animations';
-import { DOCUMENT } from '@angular/common';
-import { Component, HostBinding, HostListener, Inject, OnInit } from '@angular/core';
+import { Component, HostBinding, HostListener, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { faPhone } from '@fortawesome/free-solid-svg-icons';
 import { ModalComponent } from '../modal/modal.component';
@@ -8,15 +6,7 @@ import { ModalComponent } from '../modal/modal.component';
 @Component({
   selector: 'app-main-portfolio',
   templateUrl: './main-portfolio.component.html',
-  styleUrls: ['./main-portfolio.component.scss'],
-  animations: [
-    trigger('fade',
-      [
-        state('void', style({ opacity: 0 })),
-        transition(':enter', [animate(300)]),
-        transition(':leave', [animate(500)]),
-      ]
-    )]
+  styleUrls: ['./main-portfolio.component.scss']
 })
 export class MainPortfolioComponent implements OnInit {
 
@@ -27,7 +17,10 @@ export class MainPortfolioComponent implements OnInit {
 
   email?: string;
   collapsed = true;
-  isSticky: boolean = false;
+
+  navFixed: boolean = false;
+  private scrollOffset: number = 70;
+  navElement?: HTMLElement;
 
   constructor(public dialog: MatDialog) { }
 
@@ -62,7 +55,13 @@ export class MainPortfolioComponent implements OnInit {
     this.collapsed = true;
   }
 
-
+  @HostListener('window:scroll')
+  onWindowScroll(){
+    this.navFixed = (window.pageYOffset
+      || document.documentElement.scrollTop
+      || document.body.scrollTop || 0
+      ) > this.scrollOffset;
+  }
 
 
   ngOnInit(): void {

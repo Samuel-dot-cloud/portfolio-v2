@@ -1,38 +1,13 @@
 /* css variables */
 @import url(../../css/partials/variables.css);
 
-:host {
-  position: relative;
-  display: block;
+
+header{
+  position: fixed;
+  width: 99%;
   left: 0;
-  transition: left 0.3s ease;
-}
-
-:host.drawer-open {
-  left: 70%;
-}
-
-.nav-bar {
-  position: fixed;
-  display: block;
   top: 0;
-  width: 100vw;
-  z-index: 100;
-}
-
-.navbar-padding {
-  display: block;
-  position: relative;
-  margin-top: 3.5rem;
-}
-
-.sticky {
-  background: #fff;
-  box-shadow: 0 3px 12px 0 rgba(0,0,0,.08);
-  position: fixed;
-  top: 0;
-  height: 120px;
-  width: 100%;
+  z-index: 1001;
 }
 
 // services section

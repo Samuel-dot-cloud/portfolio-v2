@@ -1,3 +1,5 @@
+
+
 .blog_img {
   width: 60%;
   margin: auto;
@@ -6,15 +8,16 @@
 }
 
 .blog-title{
-  font-family: 'Indie Flower', cursive;
+  font-family: 'Josefin Slab', serif;
   font-size: 50px;
   text-align: center;
 }
 
 .blog_details {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Fredoka One', cursive;
   float: left;
   padding-left: 20px;
+  font-size: 20px;
 }
 
 .card {
@@ -39,6 +42,11 @@
 .rightcolumn {
   float: left;
   padding-left: 20px;
+}
+
+.blog-extras {
+  font-family: 'Syne Mono', monospace;
+  font-size: 20px;
 }
 
 
