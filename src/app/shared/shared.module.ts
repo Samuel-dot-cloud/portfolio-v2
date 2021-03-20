@@ -4,13 +4,15 @@ import { MaterialModule } from '../material.module';
 import { NewsletterComponent } from './newsletter/newsletter.component';
 import { FooterComponent } from './footer/footer.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { GhostTableComponent } from './ghost-table/ghost-table.component';
 
 
 
 @NgModule({
   declarations: [
     NewsletterComponent,
-    FooterComponent
+    FooterComponent,
+    GhostTableComponent
   ],
   imports: [
     CommonModule,
@@ -21,7 +23,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     CommonModule,
     MaterialModule,
     NewsletterComponent,
-    FooterComponent
+    FooterComponent,
+    GhostTableComponent
   ]
 })
 export class SharedModule { }

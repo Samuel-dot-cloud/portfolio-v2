@@ -12,6 +12,7 @@
     </div>
   </div>
 
+  <app-ghost-table *ngIf="!blogs"></app-ghost-table>
   <div class="container carousel py-lg-5">
         <owl-carousel-o [options]="customOptions">
           <ng-template carouselSlide *ngFor="let blog of blogs | async">

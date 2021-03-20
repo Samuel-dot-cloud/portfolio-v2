@@ -1,0 +1,22 @@
+@keyframes ghost {
+    from {
+        background-position: 0vw 0;
+    }
+    to {
+        background-position: 100vw 0;
+    }
+}
+
+.line {
+    width: 100%;
+    height: 25px;
+    margin-top: 10px;
+    border-radius: 3px;
+    background: linear-gradient(90deg, #f0f0f0, #d8d6d6, #f0f0f0) 0 0/ 80vh 100% fixed;
+    background-color: rgb(204, 199, 199);
+    animation: ghost 750ms infinite linear;
+}
+
+#ghost-element {
+    padding-top: 80px;
+}
