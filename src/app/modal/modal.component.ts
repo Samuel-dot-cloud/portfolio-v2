@@ -30,7 +30,7 @@ export class ModalComponent implements OnInit {
   mailText:string = "";
 
   mailMe(){
-    const allInfo = `My name is ${this.data.name}. My email is ${this.data.email}. My phone is ${this.data.phone}. My selected service is ${this.selected}. My message is ${this.data.paragraph}`;
+    const allInfo = `My name is ${this.data.name}.\n My email is ${this.data.email}.\n My phone is ${this.data.phone}.\n My selected service is ${this.selected}.\n My message is ${this.data.paragraph}.\n`;
     this.mailText = `mailto:samuelwahome.k5@gmail.com ?subject=Contact Sam The Developer&body=${allInfo}`
     window.location.href = this.mailText;
     this.onNoClick();

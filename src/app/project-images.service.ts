@@ -38,11 +38,11 @@ const Imagesdetails = [
   },
   {
     "id": "3",
-    "name": "Kanban",
-    "description": "A project that makes use of kanban methodology to keep track of tasks.",
+    "name": "ShockYou",
+    "description": "A clone of the popular shock app on Google Play Store.",
     "category": "latest",
-    "url": "assets/img/portfolio/kanban.png",
-    "github": "https://github.com/Samuel-dot-cloud/Kanban-Board",
+    "url": "assets/img/portfolio/shock-app.jpg",
+    "github": "https://github.com/Samuel-dot-cloud/ShockYou",
     "live": ""
   },
   {

@@ -1,4 +1,4 @@
-import { Component, HostBinding, HostListener, OnInit } from '@angular/core';
+import { Component, HostBinding, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { faPhone } from '@fortawesome/free-solid-svg-icons';
 import { ModalComponent } from '../modal/modal.component';
@@ -19,7 +19,6 @@ export class MainPortfolioComponent implements OnInit {
   collapsed = true;
 
   navFixed: boolean = false;
-  private scrollOffset: number = 70;
   navElement?: HTMLElement;
 
   constructor(public dialog: MatDialog) { }
@@ -55,13 +54,10 @@ export class MainPortfolioComponent implements OnInit {
     this.collapsed = true;
   }
 
-  @HostListener('window:scroll')
-  onWindowScroll(){
-    this.navFixed = (window.pageYOffset
-      || document.documentElement.scrollTop
-      || document.body.scrollTop || 0
-      ) > this.scrollOffset;
-  }
+
+
+
+
 
 
   ngOnInit(): void {

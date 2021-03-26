@@ -32,7 +32,7 @@
     <div class="our-project">
       <div class="row">
         <div class="column" *ngFor="let img of (allImages | filterImages:filterBy)">
-          <a class="test-popup-link" routerLink="/portfolio-gallery/{{img.id}}">
+          <a class="test-popup-link" routerLink="/projects/{{img.id}}">
             <img src="{{img.url}}" alt="portfolio-1" class="img-fluid">
           </a>
           <div class="title py-4">
