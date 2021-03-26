@@ -11,7 +11,7 @@ export class TypeDeleteComponent implements AfterViewInit {
 
   @Input() wordArray: string[] = [
     "I am a mobile and web developer📱💻.",
-    "I love translating code into brilliant solutions🍷.",
+    "I love translating code into practical solutions🍷.",
     "I like to call myself a life long learner📔📚"
   ];
 
