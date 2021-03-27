@@ -36,7 +36,7 @@ export class MainPortfolioComponent implements OnInit {
   // Modal form logic
   openDialog(): void {
     const dialogRef = this.dialog.open(ModalComponent, {
-      width: '300px',
+      width: '270px',
       data: {}
     });
 

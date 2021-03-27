@@ -18,8 +18,8 @@ export class TypeDeleteComponent implements AfterViewInit {
   @Input() textColor = "black";
   @Input() fontSize = "20px";
   @Input() blinkWidth = "2px";
-  @Input() typingSpeedMilliseconds = 200;
-  @Input() deleteSpeedMilliseconds = 100;
+  @Input() typingSpeedMilliseconds = 100;
+  @Input() deleteSpeedMilliseconds = 40;
 
   private i = 0;
 

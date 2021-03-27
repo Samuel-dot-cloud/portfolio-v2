@@ -1,6 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~bootstrap/dist/css/bootstrap.css";
 @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Josefin+Slab:ital,wght@1,600&family=Playfair+Display+SC:wght@700&family=Roboto:wght@500&family=Syne+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:ital@1&display=swap');
 @import '~ngx-owl-carousel-o/lib/styles/scss/owl.carousel';
 @import '~ngx-owl-carousel-o/lib/styles/scss/owl.theme.default';
 
@@ -101,7 +102,9 @@
 
 .site-main .about-area .about-title .paragraph>p {
   padding: .4rem 0;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Averia Serif Libre', cursive;
+  font-size: 22px;
+  color: #000;
 }
 
 /* End About Area */
